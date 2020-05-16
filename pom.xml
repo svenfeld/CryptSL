@@ -19,6 +19,7 @@
 	<modules>
 		<module>de.darmstadt.tu.crossing.CrySL</module>
 		<module>de.darmstadt.tu.crossing.CrySL.ide</module>
+		<module>de.darmstadt.tu.crossing.CrySL.interfaces</module>
 		<module>de.darmstadt.tu.crossing.CrySL.ui</module>
 		<module>de.darmstadt.tu.crossing.CrySL.target</module>
 		<module>de.darmstadt.tu.crossing.CrySL.feature</module>
