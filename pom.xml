@@ -278,13 +278,9 @@
 	</build>
 
 	<distributionManagement>
-		<snapshotRepository>
-			<id>soot-snapshot</id>
-			<url>https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/</url>
-		</snapshotRepository>
 		<repository>
-			<id>soot-release</id>
-			<url>https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-release/</url>
+			<id>github</id>
+			<url>https://maven.pkg.github.com/svenfeld/CryptSL</url>
 		</repository>
 	</distributionManagement>
 
