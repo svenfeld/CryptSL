@@ -47,7 +47,7 @@ jobs:
   publish-snapshot:
     needs: build
     runs-on: ubuntu-latest
-        steps:
+    steps:
       - name: Checkout source code
         uses: actions/checkout@v2
       # Sets up Java version
