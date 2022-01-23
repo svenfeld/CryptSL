@@ -278,10 +278,10 @@
 	</build>
 
 	<distributionManagement>
-		<Repository>
+		<repository>
 			<id>github</id>
 			<url>https://maven.pkg.github.com/svenfeld/CryptSL</url>
-		</Repository>
+		</repository>
 	</distributionManagement>
 
 	<repositories>
