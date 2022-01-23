@@ -7,7 +7,7 @@ jobs:
   build:
     strategy:
       matrix:
-        os: [windows-last, ubuntu-latest, macos-latest]
+        os: [windows-latest, ubuntu-latest, macos-latest]
     # Runs on Windows
     runs-on: ${{ matrix.os }}
     name: Project build in ${{ matrix.os }}
