@@ -63,6 +63,6 @@ jobs:
         with:
           maven-version: 3.6.3
       - name: publish SNAPSHOT
-        run: mvn -B deploy -DskipTests=true -e -X
+        run: mvn -B deploy -DskipTests=true -Pgithub
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

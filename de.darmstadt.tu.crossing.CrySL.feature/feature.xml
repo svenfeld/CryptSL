@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="de.darmstadt.tu.crossing.CrySL.feature"
-      label="de.darmstadt.tu.crossing.CrySL.feature"
-      version="2.0.2.qualifier"
+      id="com.github.svenfeld.CrySL.feature"
+      label="com.github.svenfeld.CrySL.feature"
+      version="2.0.3.qualifier"
       provider-name="Technical University Darmstadt, Paderborn University"
       plugin="https://it.crossing.tu-darmstadt.de/cognicrypt/">
 
@@ -136,24 +136,24 @@ Exhibit A – Form of Secondary Licenses Notice
    </requires>
 
    <plugin
-         id="de.darmstadt.tu.crossing.CrySL"
+         id="com.github.svenfeld.crysl"
          download-size="0"
          install-size="0"
-         version="2.0.2.qualifier"
+         version="2.0.3.qualifier"
          unpack="false"/>
 
    <plugin
-         id="de.darmstadt.tu.crossing.CrySL.ide"
+         id="com.github.svenfeld.CrySL.ide"
          download-size="0"
          install-size="0"
-         version="2.0.2.qualifier"
+         version="2.0.3.qualifier"
          unpack="false"/>
 
    <plugin
-         id="de.darmstadt.tu.crossing.CrySL.ui"
+         id="com.github.svenfeld.CrySL.ui"
          download-size="0"
          install-size="0"
-         version="2.0.2.qualifier"
+         version="2.0.3.qualifier"
          unpack="false"/>
 
 </feature>

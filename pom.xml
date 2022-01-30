@@ -2,9 +2,9 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>de.darmstadt.tu.crossing.CrySL</groupId>
-	<version>2.0.2-SNAPSHOT</version>
-	<artifactId>de.darmstadt.tu.crossing.CrySL.parent</artifactId>
+	<groupId>com.github.svenfeld</groupId>
+	<version>${revision}-SNAPSHOT</version>
+	<artifactId>com.github.svenfeld.CryptSL.parent</artifactId>
 	<packaging>pom</packaging>
 
 	<properties>
@@ -14,6 +14,7 @@
 		<project.build.sourceEncoding>windows-1252</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		<revision>2.0.3</revision>
 	</properties>
 
 	<modules>
@@ -25,6 +26,31 @@
 		<module>de.darmstadt.tu.crossing.CrySL.repository</module>
 		<module>de.darmstadt.tu.crossing.CrySL.tests</module>
 	</modules>
+
+	<profiles>
+		<profile>
+			<id>github</id>
+			<distributionManagement>
+				<repository>
+					<id>github</id>
+					<name>GitHub svenfeld Apache Maven Packages</name>
+					<url>https://maven.pkg.github.com/svenfeld/CryptSL</url>
+				</repository>
+			</distributionManagement>
+		</profile>
+		<profile>
+			<id>nexus</id>
+			<distributionManagement>
+				<snapshotRepository>
+					<id>soot-snapshot</id>
+					<name>Soot snapshot repository</name>
+					<url>https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/</url>
+					<layout>default</layout>
+				</snapshotRepository>
+			</distributionManagement>
+		</profile>
+	</profiles>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -40,8 +66,8 @@
 				<configuration>
 					<target>
 						<artifact>
-							<groupId>de.darmstadt.tu.crossing.CrySL</groupId>
-							<artifactId>de.darmstadt.tu.crossing.CrySL.target</artifactId>
+							<groupId>com.github.svenfeld</groupId>
+							<artifactId>com.github.svenfeld.CrySL.target</artifactId>
 							<version>${project.version}</version>
 						</artifact>
 					</target>
