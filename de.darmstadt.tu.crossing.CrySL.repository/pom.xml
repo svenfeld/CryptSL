@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>com.github.svenfeld</groupId>
 		<artifactId>com.github.svenfeld.CryptSL.parent</artifactId>
-		<version>${revision}</version>
+		<version>${revision}-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<artifactId>com.github.svenfeld.CrySL.repository</artifactId>
