@@ -34,8 +34,6 @@ jobs:
           minor_pattern: "(MINOR)"
         # A string to determine the format of the version output
           format: "${major}.${minor}.${patch}"
-        # bump commit
-          bump_each_commit: true
       # Bumping version
       - name: bump version
         run: |
@@ -45,6 +43,7 @@ jobs:
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
           git config --global user.name "${{ github.actor }}"
           git commit -am "Release CryptSL ${{ steps.versioning.outputs.version }}"
+	  git tag "v${{ steps.versioning.outputs.version }}"
       # test new version
       - name: test 
         run: mvn -B clean install -Pgithub
