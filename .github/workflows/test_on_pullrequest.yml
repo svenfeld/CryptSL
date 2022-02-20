@@ -12,6 +12,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     name: Project build in ${{ matrix.os }}
     steps:
+      - name: echo
+        run: echo ${{ github.actor }}
       - name: Checkout source code
         uses: actions/checkout@v2
       # Sets up Java version
