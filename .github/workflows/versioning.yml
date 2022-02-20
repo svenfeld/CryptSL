@@ -33,12 +33,12 @@ jobs:
         # Same as above except indicating a minor change, supports regular expressions wrapped with '/'
           minor_pattern: "(MINOR)"
         # A string to determine the format of the version output
-          format: "${major}.${minor}.${patch}"
+          format: "${major}.${minor}"
           bump_each_commit: true
       # Bumping version
       - name: bump version
         run: |
-          mvn build-helper:parse-version versions:set -DnewVersion=\${{ steps.versioning.outputs.version}} versions:commit
+          mvn build-helper:parse-version versions:set -DnewVersion=\${{ steps.versioning.outputs.version}}.\${parsedVersion.nextIncrementalVersion} versions:commit
           mvn tycho-versions:update-eclipse-metadata
           git ls-files | grep 'pom.xml$' | xargs git add
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
