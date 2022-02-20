@@ -2,9 +2,9 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>de.darmstadt.tu.crossing.CrySL</groupId>
-	<version>2.0.2-SNAPSHOT</version>
-	<artifactId>de.darmstadt.tu.crossing.CrySL.parent</artifactId>
+	<groupId>com.github.svenfeld</groupId>
+	<version>2.0.4-SNAPSHOT</version>
+	<artifactId>com.github.svenfeld.CryptSL.parent</artifactId>
 	<packaging>pom</packaging>
 
 	<properties>
@@ -25,6 +25,31 @@
 		<module>de.darmstadt.tu.crossing.CrySL.repository</module>
 		<module>de.darmstadt.tu.crossing.CrySL.tests</module>
 	</modules>
+
+	<profiles>
+		<profile>
+			<id>github</id>
+			<distributionManagement>
+				<repository>
+					<id>github</id>
+					<name>GitHub svenfeld Apache Maven Packages</name>
+					<url>https://maven.pkg.github.com/svenfeld/CryptSL</url>
+				</repository>
+			</distributionManagement>
+		</profile>
+		<profile>
+			<id>nexus</id>
+			<distributionManagement>
+				<snapshotRepository>
+					<id>soot-snapshot</id>
+					<name>Soot snapshot repository</name>
+					<url>https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/</url>
+					<layout>default</layout>
+				</snapshotRepository>
+			</distributionManagement>
+		</profile>
+	</profiles>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -40,8 +65,8 @@
 				<configuration>
 					<target>
 						<artifact>
-							<groupId>de.darmstadt.tu.crossing.CrySL</groupId>
-							<artifactId>de.darmstadt.tu.crossing.CrySL.target</artifactId>
+							<groupId>com.github.svenfeld</groupId>
+							<artifactId>com.github.svenfeld.CrySL.target</artifactId>
 							<version>${project.version}</version>
 						</artifact>
 					</target>
@@ -182,6 +207,59 @@
 							</pluginExecutions>
 						</lifecycleMappingMetadata>
 					</configuration>
+					<dependencies>
+						<dependency>
+							<groupId>org.eclipse.jdt</groupId>
+							<artifactId>org.eclipse.jdt.core</artifactId>
+							<version>3.12.2</version>
+							<exclusions>
+								<exclusion>
+									<groupId>org.eclipse.platform</groupId>
+									<artifactId>org.eclipse.equinox.common</artifactId>
+								</exclusion>
+								<exclusion>
+									<groupId>org.eclipse.platform</groupId>
+									<artifactId>org.eclipse.core.runtime</artifactId>
+								</exclusion>
+							</exclusions>
+						</dependency>
+						<dependency>
+							<groupId>org.eclipse.jdt</groupId>
+							<artifactId>org.eclipse.jdt.compiler.apt</artifactId>
+							<version>1.2.100</version>
+							<exclusions>
+								<exclusion>
+									<groupId>org.eclipse.platform</groupId>
+									<artifactId>org.eclipse.equinox.common</artifactId>
+								</exclusion>
+								<exclusion>
+									<groupId>org.eclipse.platform</groupId>
+									<artifactId>org.eclipse.core.runtime</artifactId>
+								</exclusion>
+							</exclusions>
+						</dependency>
+						<dependency>
+							<groupId>org.eclipse.jdt</groupId>
+							<artifactId>org.eclipse.jdt.compiler.tool</artifactId>
+							<version>1.2.51</version>
+							<exclusions>
+								<exclusion>
+									<groupId>org.eclipse.platform</groupId>
+									<artifactId>org.eclipse.equinox.common</artifactId>
+								</exclusion>
+								<exclusion>
+									<groupId>org.eclipse.platform</groupId>
+									<artifactId>org.eclipse.core.runtime</artifactId>
+								</exclusion>
+							</exclusions>
+						</dependency>
+						<dependency>
+							<groupId>org.eclipse.emf</groupId>
+							<artifactId>org.eclipse.emf.codegen</artifactId>
+							<version>2.11.0</version>
+						</dependency>
+						
+					</dependencies>
 				</plugin>
 				<plugin>
 					<!-- Can be removed after first generator execution https://bugs.eclipse.org/bugs/show_bug.cgi?id=480097 -->
@@ -226,11 +304,8 @@
 
 	<distributionManagement>
 		<repository>
-			<uniqueVersion>true</uniqueVersion>
-			<id>soot-snapshot</id>
-			<name>Soot snapshot repository</name>
-			<url>https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot</url>
-			<layout>default</layout>
+			<id>github</id>
+			<url>https://maven.pkg.github.com/svenfeld/CryptSL</url>
 		</repository>
 	</distributionManagement>
 
@@ -272,7 +347,6 @@
 		</pluginRepository>
 		
 	</pluginRepositories>
-
 	<dependencies>
 	</dependencies>
 </project>
