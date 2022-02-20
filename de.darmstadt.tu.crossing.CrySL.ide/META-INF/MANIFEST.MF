@@ -1,15 +1,15 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: de.darmstadt.tu.crossing.CrySL.ide
+Bundle-Name: com.github.svenfeld.CrySL.ide
 Bundle-Vendor: Technical University Darmstadt, Paderborn University
-Bundle-Version: 2.0.2.qualifier
-Bundle-SymbolicName: de.darmstadt.tu.crossing.CrySL.ide; singleton:=true
+Bundle-Version: 2.3.4
+Bundle-SymbolicName: com.github.svenfeld.CrySL.ide; singleton:=true
 Bundle-ActivationPolicy: lazy
-Require-Bundle: de.darmstadt.tu.crossing.CrySL,
+Require-Bundle: com.github.svenfeld.crysl,
  org.eclipse.xtext.ide,
  org.eclipse.xtext.xbase.ide,
  org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: de.darmstadt.tu.crossing.ide.contentassist.antlr.internal,
  de.darmstadt.tu.crossing.ide.contentassist.antlr
-Automatic-Module-Name: de.darmstadt.tu.crossing.CrySL.ide
+Automatic-Module-Name: com.github.svenfeld.CrySL.ide

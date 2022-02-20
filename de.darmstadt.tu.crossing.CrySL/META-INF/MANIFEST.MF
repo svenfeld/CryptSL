@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: de.darmstadt.tu.crossing.CrySL
+Bundle-Name: com.github.svenfeld.crysl
 Bundle-Vendor: Technical University Darmstadt, Paderborn University
-Bundle-Version: 2.0.2.qualifier
-Bundle-SymbolicName: de.darmstadt.tu.crossing.CrySL; singleton:=true
+Bundle-Version: 2.3.4
+Bundle-SymbolicName: com.github.svenfeld.crysl; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext,
  org.eclipse.xtext.xbase,
@@ -38,4 +38,4 @@ Export-Package: de.darmstadt.tu.crossing,
  de.darmstadt.tu.crossing.validation
 Import-Package: org.eclipse.jdt.core.dom,
  org.apache.log4j
-Automatic-Module-Name: de.darmstadt.tu.crossing.CrySL
+Automatic-Module-Name: com.github.svenfeld.crysl

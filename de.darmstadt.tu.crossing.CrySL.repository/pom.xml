@@ -2,14 +2,16 @@
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>de.darmstadt.tu.crossing.CrySL.repository</artifactId>
+
 	<packaging>eclipse-repository</packaging>
 	<parent>
-		<groupId>de.darmstadt.tu.crossing.CrySL</groupId>
-		<artifactId>de.darmstadt.tu.crossing.CrySL.parent</artifactId>
-		<version>2.0.2-SNAPSHOT</version>
+		<groupId>com.github.svenfeld</groupId>
+		<artifactId>com.github.svenfeld.CryptSL.parent</artifactId>
+		<version>2.3.4</version>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
-	<groupId>de.darmstadt.tu.crossing.CrySL</groupId>
+	<artifactId>com.github.svenfeld.CrySL.repository</artifactId>
+
 	<build>
 		<plugins>
 			<plugin>

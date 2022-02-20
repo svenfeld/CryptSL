@@ -1,11 +1,11 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: de.darmstadt.tu.crossing.CrySL.tests
+Bundle-Name: com.github.svenfeld.CrySL.tests
 Bundle-Vendor: Technical University Darmstadt, Paderborn University
-Bundle-Version: 2.0.2.qualifier
-Bundle-SymbolicName: de.darmstadt.tu.crossing.CrySL.tests; singleton:=true
+Bundle-Version: 2.3.4
+Bundle-SymbolicName: com.github.svenfeld.CrySL.tests; singleton:=true
 Bundle-ActivationPolicy: lazy
-Require-Bundle: de.darmstadt.tu.crossing.CrySL,
+Require-Bundle: com.github.svenfeld.crysl,
  org.junit,
  org.eclipse.xtext.junit4,
  org.eclipse.xtext.xbase.junit,
@@ -22,4 +22,4 @@ Import-Package: org.hamcrest.core,
  org.junit.runners;version="4.5.0",
  org.junit.runner.manipulation;version="4.5.0",
  org.junit.runner.notification;version="4.5.0"
-Automatic-Module-Name: de.darmstadt.tu.crossing.CrySL.tests
+Automatic-Module-Name: com.github.svenfeld.CrySL.tests
