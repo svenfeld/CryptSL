@@ -1,4 +1,5 @@
 name: CrySL build
+on: push
 
 jobs: 
   bump-version:
