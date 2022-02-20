@@ -6,7 +6,7 @@
 	<version>2.2.1</version>
 	<artifactId>com.github.svenfeld.CryptSL.parent</artifactId>
 	<packaging>pom</packaging>
-   
+    
 	<properties>
 		<tycho-version>1.6.0</tycho-version>
 		<xtextVersion>2.21.0</xtextVersion>
