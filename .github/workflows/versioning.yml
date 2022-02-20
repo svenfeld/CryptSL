@@ -34,6 +34,8 @@ jobs:
           minor_pattern: "(MINOR)"
         # A string to determine the format of the version output
           format: "${major}.${minor}.${patch}"
+        # bump commit
+          bump_each_commit: true
       # Bumping version
       - name: bump version
         run: |
