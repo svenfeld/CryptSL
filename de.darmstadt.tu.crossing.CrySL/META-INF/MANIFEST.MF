@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: com.github.svenfeld.crysl
 Bundle-Vendor: Technical University Darmstadt, Paderborn University
-Bundle-Version: 2.3.4
+Bundle-Version: 2.0.12
 Bundle-SymbolicName: com.github.svenfeld.crysl; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext,
