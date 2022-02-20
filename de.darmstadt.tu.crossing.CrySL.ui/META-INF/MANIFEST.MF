@@ -1,12 +1,12 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: de.darmstadt.tu.crossing.CrySL.ui
+Bundle-Name: com.github.svenfeld.CrySL.ui
 Bundle-Vendor: Technical University Darmstadt, Paderborn University
-Bundle-Version: 2.0.2.qualifier
-Bundle-SymbolicName: de.darmstadt.tu.crossing.CrySL.ui; singleton:=true
+Bundle-Version: 2.3.4
+Bundle-SymbolicName: com.github.svenfeld.CrySL.ui; singleton:=true
 Bundle-ActivationPolicy: lazy
-Require-Bundle: de.darmstadt.tu.crossing.CrySL,
- de.darmstadt.tu.crossing.CrySL.ide,
+Require-Bundle: com.github.svenfeld.crysl,
+ com.github.svenfeld.CrySL.ide,
  org.eclipse.xtext.ui,
  org.eclipse.xtext.ui.shared,
  org.eclipse.xtext.ui.codetemplates.ui,
@@ -26,9 +26,10 @@ Require-Bundle: de.darmstadt.tu.crossing.CrySL,
  org.eclipse.jdt.core
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: de.darmstadt.tu.crossing.CrySL.ui.internal,
+Export-Package: com.github.svenfeld.CrySL.ui.internal,
  de.darmstadt.tu.crossing.ui.contentassist,
  de.darmstadt.tu.crossing.ui.quickfix,
- de.darmstadt.tu.crossing.ui.wizard
-Bundle-Activator: de.darmstadt.tu.crossing.CrySL.ui.internal.CrySLActivator
-Automatic-Module-Name: de.darmstadt.tu.crossing.CrySL.ui
+ de.darmstadt.tu.crossing.ui.wizard,
+ de.darmstadt.tu.crossing.CrySL.ui.internal
+Bundle-Activator: com.github.svenfeld.CrySL.ui.internal.CrySLActivator
+Automatic-Module-Name: com.github.svenfeld.CrySL.ui
