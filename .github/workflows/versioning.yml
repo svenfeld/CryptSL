@@ -44,11 +44,8 @@ jobs:
           git config --global user.name "${{ github.actor }}"
           git commit -am "Release CryptSL ${{ steps.versioning.outputs.version }}"
 	  git tag "v${{ steps.versioning.outputs.version }}"
-      # test new version
-      - name: test 
-        run: mvn -B clean install -Pgithub
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          echo "TARGET_COMMITISH=$(git rev-parse HEAD)" >> $GITHUB_ENV
+          git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/svenfeld/CryptSL.git
       # push version bump after test
       - name: push
         run: git push
