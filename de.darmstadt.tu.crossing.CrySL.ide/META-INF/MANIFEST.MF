@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: com.github.svenfeld.CrySL.ide
 Bundle-Vendor: Technical University Darmstadt, Paderborn University
-Bundle-Version: 2.2.6
+Bundle-Version: 2.2.7
 Bundle-SymbolicName: com.github.svenfeld.CrySL.ide; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: com.github.svenfeld.crysl,

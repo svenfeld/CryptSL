@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/com.github.svenfeld.CrySL.feature_2.2.6.jar" id="com.github.svenfeld.CrySL.feature" version="2.2.6">
+   <feature url="features/com.github.svenfeld.CrySL.feature_2.2.7.jar" id="com.github.svenfeld.CrySL.feature" version="2.2.7">
       <category name="CrySL"/>
    </feature>
    <category-def name="CrySL" label="CrySL"/>
