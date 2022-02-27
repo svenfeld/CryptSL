@@ -44,7 +44,9 @@ jobs:
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
           git config --global user.name "${{ github.actor }}"
           git commit -am "Release CryptSL ${{ steps.versioning.outputs.version }}"
+          git tag "v${{ steps.versioning.outputs.version }}"
+          git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/google/google-java-format.git
       # push version bump after test
       - name: push
-        run: git push
-
+        run: git push origin "v${{ steps.versioning.outputs.version }}"
+    
